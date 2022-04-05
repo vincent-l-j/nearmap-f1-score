@@ -24,7 +24,7 @@ def main():
         'Sunday',
     )
     f1_score = calculate_weekday_f1_score(df, weekdays.index(day))
-    print(f"{f1_score:.5f}")
+    print(f"The f1 score for {day}s is: {f1_score:.5f}")
 
 
 def calculate_weekday_f1_score(df, day):
