@@ -12,10 +12,18 @@ def main():
         parse_dates=True,
         index_col='dates',
     )
-    # Thursday
-    day = 3
+    day = 'Thursday'
     # calculate f1 score for Thursdays
-    f1_score = calculate_weekday_f1_score(df, day)
+    weekdays = (
+        'Monday',
+        'Tuesday',
+        'Wednesday',
+        'Thursday',
+        'Friday',
+        'Saturday',
+        'Sunday',
+    )
+    f1_score = calculate_weekday_f1_score(df, weekdays.index(day))
     print(f"{f1_score:.5f}")
 
 
